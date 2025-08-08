@@ -12,6 +12,7 @@ while read img; do
     #     dwebp "$img_filename" -o "${img_filename%.webp}.png"
     #     rm "$img_filename"
     # fi
+    echo $img
 done < image_urls
 rm image_urls
-find . -type f -iname "*${img}.*" -exec mv -t pix/ {} +
+find . -type f -iname "*${file}.*" -exec mv {} pix/ \;
