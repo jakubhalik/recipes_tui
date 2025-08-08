@@ -12,4 +12,4 @@ provided with 2 examples of already curled recipes
 ![strawberry compote](./docs_pix/2025-08-08_22:52:18.png)
 
 ![tajina](./docs_pix/2025-08-08_22:52:41.png)
-![how to fetch and read a recepy](./docs_pix/use.mp4)
+![how to fetch and read a recipe](./docs_pix/use.mp4)
