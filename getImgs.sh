@@ -1,5 +1,10 @@
 #!/bin/bash
-read -p "enter filename: " file
+if [ -z "$1" ]; then
+        read -p "enter filename: " file
+else
+        file="$1"
+fi
+
 grep -o '<img [^>]*src="[^"]*' "$file" | sed 's/<img [^>]*src="//' > image_urls
 while read img; do
     curl -O --proxy socks5h://localhost:9050 https://based.cooking"$img"
@@ -9,4 +14,4 @@ while read img; do
     # fi
 done < image_urls
 rm image_urls
-
+find . -type f -iname "*${img}.*" -exec mv -t pix/ {} +
